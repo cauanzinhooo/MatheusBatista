@@ -1,5 +1,5 @@
-import AboutRoot from './AboutRoot';
+import AboutRoot from './AboutRoot'
 
 export const About = {
- Root: AboutRoot
+  Root: AboutRoot,
 }

@@ -1,5 +1,5 @@
-import WelcomeRoot from './WelcomeRoot';
+import WelcomeRoot from './WelcomeRoot'
 
- export const Welcome = {
-    Root: WelcomeRoot
+export const Welcome = {
+  Root: WelcomeRoot,
 }
