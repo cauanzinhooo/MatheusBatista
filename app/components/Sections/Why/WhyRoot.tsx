@@ -5,8 +5,8 @@ type WhyRoot = {
 }
 const WhyRoot = ({ children }: WhyRoot) => {
   return (
-    <section className="pt-[200px] bg-gradient-to-b from-[#180424]  to-80% to-black  ">
-      <div className="mx-auto container">{children}</div>
+    <section className="bg-gradient-to-b from-[#180424]  to-black  to-80% pt-[200px]  ">
+      <div className="container mx-auto">{children}</div>
     </section>
   )
 }

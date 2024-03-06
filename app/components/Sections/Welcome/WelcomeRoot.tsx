@@ -8,14 +8,14 @@ type WelcomeProps = {
 }
 const WelcomeRoot = ({ children }: WelcomeProps) => {
   return (
-    <section className="bg-gradient-to-b from-black to-[#280c44] h-[520px] mt-6 min-[489px]:mt-28 sm:mt-32">
+    <section className="mt-6 h-[520px] bg-gradient-to-b from-black to-[#280c44] min-[489px]:mt-28 sm:mt-32">
       <Image
-        className="absolute w-[350px] sm:w-[492px] top-80 sm:top-60 lg:top-1/4 left-0  "
+        className="absolute left-0 top-80 w-[350px] sm:top-60 sm:w-[492px] lg:top-1/4  "
         alt=""
         src={LeftHand}
       />
       <Image
-        className="absolute w-[350px] sm:w-[492px]  top-80 sm:top-60 lg:top-1/4 right-0"
+        className="absolute right-0 top-80  w-[350px] sm:top-60 sm:w-[492px] lg:top-1/4"
         alt=""
         src={RightHand}
       />
