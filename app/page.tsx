@@ -40,9 +40,13 @@ export default function Home() {
             estratégias para alavancar o seu negócio e atingir o seu público
             ideial.
           </p>
-          <Button size="xl" color="gradient">
-            <span className="mx-20">QUERO DIVULGAR MEU NEGÓCIO</span>
-          </Button>
+          <div className="mx-5  flex justify-center">
+            <Button size="xl" color="gradient">
+              <span className="mx-auto items-center text-center ">
+                QUERO DIVULGAR MEU NEGÓCIO
+              </span>
+            </Button>
+          </div>
         </About.Root>
       </main>
       <Why.Root>
@@ -76,6 +80,13 @@ export default function Home() {
         </div>
       </Why.Root>
       <List />
+      <div className="mx-5 mt-[54px] flex justify-center">
+        <Button size="xl" color="gradientsecondary">
+          <span className="mx-auto items-center text-center ">
+            QUERO DIVULGAR MEU NEGÓCIO
+          </span>
+        </Button>
+      </div>
     </>
   )
 }

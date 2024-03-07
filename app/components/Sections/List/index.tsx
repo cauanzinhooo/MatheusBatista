@@ -1,35 +1,35 @@
-import { FaCheck, FaTimes } from 'react-icons/fa'
+import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa'
 
 const ListBeneficts = [
   {
     id: 1,
     item: 'Alcance ilimitado',
-    Announcement: <FaCheck className="items-end" />,
-    Organic: <FaTimes />,
+    Announcement: <FaCheckCircle size={30} color="#50ac4c" />,
+    Organic: <FaTimesCircle size={30} color="#e81c1c" />,
   },
   {
     id: 2,
-    item: 'Alcance ilimitado',
-    Announcement: <FaCheck />,
-    Organic: <FaTimes />,
+    item: 'Garantia de entrega',
+    Announcement: <FaCheckCircle size={30} color="#50ac4c" />,
+    Organic: <FaTimesCircle size={30} color="#e81c1c" />,
   },
   {
     id: 3,
-    item: 'Alcance ilimitado',
-    Announcement: <FaCheck size={20} />,
-    Organic: <FaTimes />,
+    item: 'Custo',
+    Announcement: 'A Partir de R$6/Dia',
+    Organic: 'A Partir de R$600',
   },
   {
     id: 4,
-    item: 'Alcance ilimitado',
-    Announcement: <FaCheck />,
-    Organic: <FaTimes />,
+    item: 'Resultados',
+    Announcement: 'Relatório Mensal',
+    Organic: 'Difícil de medir',
   },
   {
     id: 5,
-    item: 'Alcance ilimitado',
-    Announcement: <FaCheck />,
-    Organic: <FaTimes />,
+    item: 'Segmentação ilimitada',
+    Announcement: <FaCheckCircle className="" size={30} color="#50ac4c" />,
+    Organic: <FaTimesCircle size={30} color="#e81c1c" />,
   },
 ]
 
@@ -42,30 +42,41 @@ const List = () => {
           que a publicidade tradicional
         </h2>
       </div>
-      <div className=" mx-auto flex w-full max-w-[400px] flex-col rounded-[16px] bg-red-400 bg-gradient-to-r from-[#4F3FA1] to-[#1D173B] py-2 sm:max-w-[600px] sm:py-3 ">
-        <ul className="mx-1 flex w-full list-none justify-between sm:px-5">
-          <li className="text-center">Tipo de anúncio</li>
-          <li className=" text-center sm:flex-1 sm:text-right">Anúncio Pago</li>
-          <li className=" text-center sm:flex-1 sm:text-right">Orgânico</li>
-        </ul>
-      </div>
-
-      {ListBeneficts.map((item) => (
-        <div
-          key={item.id}
-          className="mx-auto flex max-w-[400px] flex-col border-b-[1px] border-white py-2 sm:max-w-[600px] sm:py-3"
-        >
-          <ul className="mx-1 flex w-full list-none  justify-end sm:px-5">
-            <li className="text-center">{item.item}</li>
-            <li className="items-end text-center sm:flex-1 sm:text-right">
-              <span className="bg-red-400">{item.Announcement}</span>
-            </li>
-            <li className="text-center sm:flex-1 sm:text-right">
-              {item.Organic}
-            </li>
-          </ul>
-        </div>
-      ))}
+      <table className="mx-auto table-fixed ">
+        <thead>
+          <tr className="bg-gradient-to-r from-[#4F3FA1] to-[#1D173B] font-sans text-lg font-medium">
+            <th className="rounded-bl-[16px] rounded-tl-[16px] py-3 pl-3 text-center sm:px-20 sm:text-left ">
+              Tipo de anúncio
+            </th>
+            <th className="px-3 py-2  min-[440px]:pl-10">Anúncio Pago</th>
+            <th className="rounded-br-[16px]  rounded-tr-[16px] py-3 pr-3 sm:pr-10">
+              Orgânico
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {ListBeneficts.map((item) => (
+            <tr
+              className="border-b-[1px] border-white font-light "
+              key={item.id}
+            >
+              <td className="rounded-bl-[16px] rounded-tl-[16px] py-3  pl-3 text-center sm:px-20 sm:text-left  ">
+                {item.item}
+              </td>
+              <td className="px-3 py-2  min-[440px]:pl-10">
+                <div className="mx-auto flex max-w-[160px] items-center justify-center text-center">
+                  {item.Announcement}
+                </div>
+              </td>
+              <td className="max-w-[190px] py-2 pl-2 pr-10 text-center">
+                <div className="mx-auto flex max-w-[150px] items-center justify-center">
+                  {item.Organic}
+                </div>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </section>
   )
 }
