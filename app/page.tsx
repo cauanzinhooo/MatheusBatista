@@ -8,6 +8,7 @@ import List from './components/Sections/List'
 import Promotion from './components/Sections/Promotion'
 import { Socials } from './components/Sections/Socials'
 import { Socialsdata } from './utils/variables'
+import Services from './components/Sections/Services'
 export default function Home() {
   return (
     <>
@@ -87,12 +88,12 @@ export default function Home() {
       <Socials.Root>
         {Socialsdata.map((i) => (
           <div
-            className="flex justify-center rounded-2xl bg-[#1A1A1A]"
+            className="flex justify-center rounded-[38px]   bg-[#1A1A1A]"
             key={i.id}
           >
             <div className="flex flex-col">
-              <span className="mx-auto">{i.icon}</span>
-              <h2 className="mx-2 text-center font-sans text-lg font-semibold">
+              <span className="mx-auto pt-3">{i.icon}</span>
+              <h2 className="mx-2 py-3 text-center font-sans text-lg font-semibold">
                 {i.iconName}
               </h2>
               <p className="mx-4 max-w-52  text-center font-sans font-extralight text-gray-200">
@@ -102,6 +103,7 @@ export default function Home() {
           </div>
         ))}
       </Socials.Root>
+      <Services />
     </>
   )
 }

@@ -5,13 +5,18 @@ type SocialsProps = {
 }
 const SocialsRoot = ({ children }: SocialsProps) => {
   return (
-    <section>
+    <section className="mt-[225px]">
       <div className="container mx-auto">
-        <h2 className="mx-auto max-w-[600px] text-center font-sans text-[38px] font-semibold">
-          Onde seu anúncio será exibido? A sua empresa nas MAIORES plataformas
+        <h2 className="mx-auto max-w-[650px] text-center font-sans text-[40px] font-semibold">
+          Onde seu anúncio será exibido? <br />
+          <span className="font-extralight text-gray-200">
+            A sua empresa nas{' '}
+            <span className="font-extrabold text-white">MAIORES</span>{' '}
+            plataformas
+          </span>
         </h2>
       </div>
-      <div className="flex justify-center gap-5 bg-red-400">{children}</div>
+      <div className="mt-[88px] flex justify-center gap-5">{children}</div>
     </section>
   )
 }
