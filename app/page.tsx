@@ -5,6 +5,9 @@ import { Welcome } from './components/Sections/Welcome'
 import { Why } from './components/Sections/Why'
 import Computer from '@/public/Computer.svg'
 import List from './components/Sections/List'
+import Promotion from './components/Sections/Promotion'
+import { Socials } from './components/Sections/Socials'
+import { Socialsdata } from './utils/variables'
 export default function Home() {
   return (
     <>
@@ -80,13 +83,25 @@ export default function Home() {
         </div>
       </Why.Root>
       <List />
-      <div className="mx-5 mt-[54px] flex justify-center">
-        <Button size="xl" color="gradientsecondary">
-          <span className="mx-auto items-center text-center ">
-            QUERO DIVULGAR MEU NEGÓCIO
-          </span>
-        </Button>
-      </div>
+      <Promotion />
+      <Socials.Root>
+        {Socialsdata.map((i) => (
+          <div
+            className="flex justify-center rounded-2xl bg-[#1A1A1A]"
+            key={i.id}
+          >
+            <div className="flex flex-col">
+              <span className="mx-auto">{i.icon}</span>
+              <h2 className="mx-2 text-center font-sans text-lg font-semibold">
+                {i.iconName}
+              </h2>
+              <p className="mx-4 max-w-52  text-center font-sans font-extralight text-gray-200">
+                {i.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </Socials.Root>
     </>
   )
 }
