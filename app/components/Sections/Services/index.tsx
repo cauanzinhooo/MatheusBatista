@@ -3,10 +3,13 @@ import Carousel from 'nuka-carousel'
 import { Servicesdata, currentslide } from '@/app/utils/variables'
 import Button from '../../Atoms/Button'
 
-const Services = ({}) => {
+type CarouselProps = {
+  currentSlide: number
+}
+const Services = () => {
   const unRenderControls = () => <div></div>
 
-  const renderToggleButton = ({ currentSlide }) => (
+  const renderToggleButton = ({ currentSlide }: CarouselProps) => (
     <div className="absolute bottom-[-10px] flex -translate-x-1/2 -translate-y-1/2 transform gap-3 sm:right-20 sm:top-10  sm:block sm:-translate-x-0 sm:-translate-y-0">
       {currentslide.map((id) => (
         <label key={id.current} className=" cursor-pointer">
