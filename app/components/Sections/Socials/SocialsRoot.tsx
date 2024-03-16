@@ -5,18 +5,24 @@ type SocialsProps = {
 }
 const SocialsRoot = ({ children }: SocialsProps) => {
   return (
-    <section className="mt-[225px]">
-      <div className="container mx-auto">
-        <h2 className="mx-auto max-w-[650px] text-center font-sans text-[40px] font-semibold">
-          Onde seu anúncio será exibido? <br />
-          <span className="font-extralight text-gray-200">
-            A sua empresa nas{' '}
-            <span className="font-extrabold text-white">MAIORES</span>{' '}
-            plataformas
-          </span>
-        </h2>
+    <section className=" py-20">
+      {/* <Image className="absolute right-0 " src={Blur} alt="png" /> */}
+
+      <div className="container relative mx-auto">
+        <div className="mx-3">
+          <h2 className="mx-auto max-w-[650px] text-center font-sans text-2xl font-semibold text-white sm:text-[40px]">
+            Onde seu anúncio será exibido? <br />
+            <span className="font-extralight text-gray-200">
+              A sua empresa nas{' '}
+              <span className="font-extrabold text-white">MAIORES</span>{' '}
+              plataformas
+            </span>
+          </h2>
+        </div>
       </div>
-      <div className="mt-[88px] flex justify-center gap-5">{children}</div>
+      <div className="relative mx-3 mt-[88px] flex flex-col  justify-center gap-5  text-white md:flex-row">
+        {children}
+      </div>
     </section>
   )
 }

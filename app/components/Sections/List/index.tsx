@@ -1,6 +1,4 @@
 import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa'
-import Blur from '@/public/FUNDO LP 3 2.svg'
-import Image from 'next/image'
 import Button from '../../Atoms/Button'
 const ListBeneficts = [
   {
@@ -38,51 +36,56 @@ const ListBeneficts = [
 const List = () => {
   return (
     <>
-      <Image className="absolute right-0 " src={Blur} alt="png" />
-      <section className="container relative mx-auto">
-        <div className="relative mx-3">
-          <h2 className="mx-auto mb-[70px] mt-[120px]   max-w-[900px] text-center font-sans text-[38px] font-semibold">
-            O tráfego pago permite que você alcance uma audiência muito maior do
-            que a publicidade tradicional
-          </h2>
+      <section className="bg-gradient-to-b from-[#3D107B] via-[#280c44] to-black">
+        <div className="container relative mx-auto  py-5">
+          <div className="relative mx-10">
+            <h2 className="mx-auto mb-[70px] mt-[120px] max-w-[900px]   text-center font-sans text-2xl font-semibold text-white sm:text-[38px]">
+              O tráfego pago permite que você alcance uma audiência muito maior
+              do que a publicidade tradicional
+            </h2>
+          </div>
+          <div className="mx-3 sm:mx-0">
+            <table className="relative mx-auto table-fixed text-white ">
+              <thead>
+                <tr className="bg-gradient-to-r from-[#4F3FA1] to-[#1D173B] font-sans text-base font-medium sm:text-lg">
+                  <th className="rounded-bl-[16px] rounded-tl-[16px] py-3 pl-3 text-center sm:px-20 sm:text-left ">
+                    Tipo de anúncio
+                  </th>
+                  <th className="px-3 py-2  min-[440px]:pl-10">Anúncio Pago</th>
+                  <th className="rounded-br-[16px]  rounded-tr-[16px] py-3 pr-3 sm:pr-10">
+                    Orgânico
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {ListBeneficts.map((item) => (
+                  <tr
+                    className="border-b-[1px] border-[#9c9c9c] font-light "
+                    key={item.id}
+                  >
+                    <td className="rounded-bl-[16px] rounded-tl-[16px] py-3  pl-3 text-center sm:px-20 sm:text-left  ">
+                      {item.item}
+                    </td>
+                    <td className="px-3 py-2  min-[440px]:pl-10">
+                      <div className="mx-auto flex max-w-[160px] items-center justify-center text-center">
+                        {item.Announcement}
+                      </div>
+                    </td>
+                    <td className="max-w-[140px] items-center py-2 pl-2 pr-10 text-center sm:max-w-[190px]">
+                      <div className=" flex max-w-[150px] items-center justify-center">
+                        <span className="mx-auto text-center">
+                          {item.Organic}
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
-        <table className="relative mx-auto table-fixed ">
-          <thead>
-            <tr className="bg-gradient-to-r from-[#4F3FA1] to-[#1D173B] font-sans text-lg font-medium">
-              <th className="rounded-bl-[16px] rounded-tl-[16px] py-3 pl-3 text-center sm:px-20 sm:text-left ">
-                Tipo de anúncio
-              </th>
-              <th className="px-3 py-2  min-[440px]:pl-10">Anúncio Pago</th>
-              <th className="rounded-br-[16px]  rounded-tr-[16px] py-3 pr-3 sm:pr-10">
-                Orgânico
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {ListBeneficts.map((item) => (
-              <tr
-                className="border-b-[1px] border-white font-light "
-                key={item.id}
-              >
-                <td className="rounded-bl-[16px] rounded-tl-[16px] py-3  pl-3 text-center sm:px-20 sm:text-left  ">
-                  {item.item}
-                </td>
-                <td className="px-3 py-2  min-[440px]:pl-10">
-                  <div className="mx-auto flex max-w-[160px] items-center justify-center text-center">
-                    {item.Announcement}
-                  </div>
-                </td>
-                <td className="max-w-[190px] py-2 pl-2 pr-10 text-center">
-                  <div className="mx-auto flex max-w-[150px] items-center justify-center">
-                    {item.Organic}
-                  </div>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
       </section>
-      <div className="relative mx-5 mt-[54px] flex justify-center">
+      <div className="relative mx-5 mt-[54px] flex justify-center ">
         <Button size="xl" color="gradientsecondary">
           <span className="mx-auto items-center text-center ">
             QUERO DIVULGAR MEU NEGÓCIO

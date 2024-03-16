@@ -1,37 +1,87 @@
 'use client'
 import Carousel from 'nuka-carousel'
-import { Servicesdata } from '@/app/utils/variables'
+import { Servicesdata, currentslide } from '@/app/utils/variables'
+import Button from '../../Atoms/Button'
 
-const Services = () => {
-  const renderBottomCenterControls = ({ currentSlide }: any) => (
-    <div className="absolute right-0 top-0 flex w-[400px] flex-col justify-around bg-red-400">
-      <button style={{ color: currentSlide === 0 ? 'red' : 'black' }}>1</button>
-      <button style={{ color: currentSlide === 1 ? 'red' : 'black' }}>2</button>
-      <button style={{ color: currentSlide === 2 ? 'red' : 'black' }}>3</button>
+const Services = ({}) => {
+  const unRenderControls = () => <div></div>
+
+  const renderToggleButton = ({ currentSlide }) => (
+    <div className="absolute bottom-[-10px] flex -translate-x-1/2 -translate-y-1/2 transform gap-3 sm:right-20 sm:top-10  sm:block sm:-translate-x-0 sm:-translate-y-0">
+      {currentslide.map((id) => (
+        <label key={id.current} className=" cursor-pointer">
+          <input
+            type="checkbox"
+            checked={currentSlide === id.current}
+            className="peer hidden"
+          />
+          <div
+            className={
+              currentSlide === id.current
+                ? " relative my-4 h-6 w-5 rounded-full after:absolute after:start-[-1000px] after:top-[2px] after:rounded-full after:border after:border-gray-300 after:bg-gray-200 after:transition-all after:content-[''] peer-checked:bg-[#6121BB] peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 sm:w-11 sm:after:start-[2px] sm:after:h-5 sm:after:w-5  sm:after:bg-white rtl:peer-checked:after:-translate-x-full dark:border-gray-600 "
+                : " relative my-4 h-6 w-5 rounded-full after:absolute after:start-[-1000px] after:top-[2px] after:rounded-full after:border after:border-gray-300 after:bg-gray-200 after:transition-all after:content-[''] peer-checked:bg-[#6121BB] peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 sm:w-11 sm:after:start-[2px] sm:after:h-5 sm:after:w-5 sm:after:bg-white rtl:peer-checked:after:-translate-x-full dark:border-gray-600 dark:bg-gray-700 dark:peer-focus:ring-blue-800"
+            }
+          ></div>
+        </label>
+      ))}
     </div>
   )
 
   return (
-    <section className="mt-[86px]">
-      <h2 className="ext- bg-gradient-to-r from-[#984FFF] to-[#2C0F55] bg-clip-text text-center font-sans text-[40px] font-extrabold text-transparent">
+    <section className="relative mt-[86px] bg-gradient-to-b from-black   to-[#280c44]">
+      <h2 className="mx-3 bg-gradient-to-r from-[#984FFF] to-[#2C0F55] bg-clip-text text-center font-sans text-2xl font-extrabold text-transparent sm:text-[40px]">
         Quais serviços você encontrará aqui?
       </h2>
-      <div className="mb-100 container mx-auto  py-20">
-        <div className="mx-5">
+      <div className="container mx-auto mb-[50px]  max-w-[886px]  py-20">
+        <div
+          className="relative mx-5 rounded-[40px]  before:absolute
+          
+  before:right-2
+  before:top-3
+  before:h-[510px]
+  
+  before:w-full
+  before:rounded-[40px]
+  before:bg-gradient-to-r
+  
+  before:from-[#2C0F55]
+  before:to-[#6121BB]
+  before:blur-[1px]
+  min-[338px]:before:h-[485px]
+  min-[366px]:before:h-[460px]
+  min-[404px]:before:h-[440px]
+  "
+        >
           <Carousel
-            renderBottomCenterControls={renderBottomCenterControls}
-            className="shadow-[50px 0px 50px 20px] relative rounded-[40px] bg-[#1A1A1A] shadow-purple-700"
+            autoplay
+            autoplayInterval={4000}
+            renderCenterRightControls={unRenderControls}
+            renderCenterLeftControls={unRenderControls}
+            renderBottomCenterControls={renderToggleButton}
+            className={`before:hful before:-w-full relative rounded-[40px] bg-[#1A1A1A] pb-14 pt-24 before:absolute before:bottom-5 before:bg-yellow-400 before:shadow-3xl   before:shadow-blue-700 before:content-['']`}
           >
             {Servicesdata.map((i) => (
-              <div className="mx-5 flex flex-col " key={i.id}>
-                <h2 className="max-w-96 font-sans text-4xl font-semibold">
+              <div
+                className="mx-auto flex max-w-[387px] flex-col text-white  sm:ml-[60px]"
+                key={i.id}
+              >
+                <h2 className="mx-1 w-full  text-center font-sans  text-4xl font-semibold sm:text-left">
                   {i.title}
                 </h2>
-                <p>{i.description}</p>
+                <p className=" mx-1 mt-5 max-w-[392px] text-center font-sans text-base font-extralight text-gray-100 sm:text-left">
+                  {i.description}
+                </p>
               </div>
             ))}
           </Carousel>
         </div>
+      </div>
+      <div className="mx-5 flex justify-center">
+        <Button size="xl" color="gradientsecondary">
+          <span className="mx-auto items-center text-center ">
+            QUERO DIVULGAR MEU NEGÓCIO
+          </span>
+        </Button>
       </div>
     </section>
   )
