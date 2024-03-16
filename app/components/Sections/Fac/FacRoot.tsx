@@ -9,7 +9,7 @@ const FacRoot = () => {
     Array(Faqdata.length).fill(false),
   )
 
-  const handleShow = (index) => {
+  const handleShow = (index: number) => {
     const newExpandedItems = [...expandedItems]
     newExpandedItems[index] = !newExpandedItems[index]
     setExpandedItems(newExpandedItems)
