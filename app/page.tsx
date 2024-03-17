@@ -23,14 +23,15 @@ export default function Home() {
             <h1 className=" font-sans text-5xl font-semibold text-white md:text-7xl ">
               Matheus <span className="text-purple-700">Batista</span>
             </h1>
-            <span className="  font-sans text-[30px] font-extralight text-white sm:mt-0 lg:text-[40px]">
-              Gestor de Tráfego
-            </span>
+            <p className="font-sans text-3xl font-extralight text-white">
+              <span className="font-semibold text-purple-700">Gestor</span> de
+              Tráfego
+            </p>
           </div>
         </Welcome.Root>
         <About.Root>
           <h2 className=" mx-3 font-sans text-[40px] font-bold text-white">
-            Matheus Batista |{' '}
+            Matheus Batista{' '}
             <span className="font-sans font-extralight text-white">
               Gestor de Tráfego
             </span>

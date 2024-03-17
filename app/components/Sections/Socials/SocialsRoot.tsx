@@ -6,8 +6,6 @@ type SocialsProps = {
 const SocialsRoot = ({ children }: SocialsProps) => {
   return (
     <section className=" py-20">
-      {/* <Image className="absolute right-0 " src={Blur} alt="png" /> */}
-
       <div className="container relative mx-auto">
         <div className="mx-3">
           <h2 className="mx-auto max-w-[650px] text-center font-sans text-2xl font-semibold text-white sm:text-[40px]">

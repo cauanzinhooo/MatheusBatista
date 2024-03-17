@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Matheus Batista | Gestor de Trafégo',
   description: 'As melhores soluções para seus anúncios e gestões.',
+  icons: {
+    icon: './favicon.ico',
+  },
 }
 
 export default function RootLayout({

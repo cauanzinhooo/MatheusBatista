@@ -39,15 +39,15 @@ const List = () => {
       <section className="bg-gradient-to-b from-[#3D107B] via-[#280c44] to-black">
         <div className="container relative mx-auto  py-5">
           <div className="relative mx-10">
-            <h2 className="mx-auto mb-[70px] mt-[120px] max-w-[900px]   text-center font-sans text-2xl font-semibold text-white sm:text-[38px]">
+            <h2 className="mx-auto mb-[70px] mt-[120px] max-w-[900px]   text-center font-sans text-2xl font-semibold  text-white sm:text-4xl">
               O tráfego pago permite que você alcance uma audiência muito maior
               do que a publicidade tradicional
             </h2>
           </div>
-          <div className="mx-3 sm:mx-0">
-            <table className="relative mx-auto table-fixed text-white ">
-              <thead>
-                <tr className="bg-gradient-to-r from-[#4F3FA1] to-[#1D173B] font-sans text-base font-medium sm:text-lg">
+          <div className="mx-2 sm:mx-0 ">
+            <table className="relative  mx-auto table-fixed text-white ">
+              <thead className="bg-gradient-to-r from-[#4F3FA1] to-[#1D173B]">
+                <tr className=" font-sans text-base font-medium sm:text-lg">
                   <th className="rounded-bl-[16px] rounded-tl-[16px] py-3 pl-3 text-center sm:px-20 sm:text-left ">
                     Tipo de anúncio
                   </th>
