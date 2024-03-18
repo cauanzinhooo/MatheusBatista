@@ -40,7 +40,7 @@ const FacRoot = () => {
                 </div>
               </div>
               {expandedItems[index] ? (
-                <div className=" mx-3 ml-11 flex max-w-[900px] pb-3  text-base font-extralight   min-[500px]:ml-[72px] md:ml-16 ">
+                <div className=" mx-3 ml-16 flex max-w-[900px] pb-3  text-base font-extralight   min-[500px]:ml-[72px] md:ml-20 ">
                   {item.desc}
                 </div>
               ) : (

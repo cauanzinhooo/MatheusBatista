@@ -20,9 +20,9 @@ const button = tv({
       green:
         'hover:bg-transparent  hover:border-white border-[#4BAE51] border-[1px] bg-[#4BAE51]',
       gradient:
-        'hover:bg-gradient-to-l hover:from-[#8A21BB] hover:to-[#2C0F55] bg-gradient-to-r from-[#8A21BB] transition-all via-[#4F3FA1]  to-[#2C0F55]',
+        'hover:bg-gradient-to-l  hover:from-[#8A21BB] hover:to-[#2C0F55] bg-gradient-to-r from-[#8A21BB] border-none transition-all via-[#4F3FA1]  to-[#2C0F55]',
       gradientsecondary:
-        ' hover:bg-gradient-to-l hover:from-[#4F3FA1] hover:to-[#2C0F55] bg-gradient-to-r from-[#4F3FA1] to-[#2C0F55]',
+        ' hover:bg-gradient-to-l hover:from-[#4F3FA1] hover:to-[#2C0F55] bg-gradient-to-r from-[#4F3FA1] to-[#2C0F55] border-none',
     },
   },
 })

@@ -41,7 +41,7 @@ const Services = () => {
           
   before:right-2
   before:top-3
-  before:h-[510px]
+  before:h-[569px]
   
   before:w-full
   before:rounded-[40px]
@@ -50,9 +50,10 @@ const Services = () => {
   before:from-[#2C0F55]
   before:to-[#6121BB]
   before:blur-[1px]
-  min-[338px]:before:h-[485px]
-  min-[366px]:before:h-[460px]
-  min-[404px]:before:h-[440px]
+  min-[338px]:before:h-[520px]
+
+  min-[378px]:before:h-[490px]
+  min-[404px]:before:h-[470px]
   "
         >
           <Carousel
@@ -65,13 +66,13 @@ const Services = () => {
           >
             {Servicesdata.map((i) => (
               <div
-                className="mx-auto flex max-w-[387px] flex-col text-white  sm:ml-[60px]"
+                className="mx-auto flex max-w-[387px] flex-col py-5  text-white  sm:ml-[60px]  sm:py-0"
                 key={i.id}
               >
                 <h2 className="mx-1 w-full  text-center font-sans  text-4xl font-semibold sm:text-left">
                   {i.title}
                 </h2>
-                <p className=" mx-1 mt-5 max-w-[392px] text-center font-sans text-base font-extralight text-gray-100 sm:text-left">
+                <p className=" mx-3 mt-5 max-w-[392px] text-center font-sans text-base font-extralight text-gray-100 sm:text-left">
                   {i.description}
                 </p>
               </div>

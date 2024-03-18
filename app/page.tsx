@@ -172,13 +172,15 @@ export default function Home() {
             nosso contato
           </p>
           <div className="mt-8 flex justify-center">
-            <Button
-              icon={<FaWhatsapp className="mr-3" size={32} />}
-              color="green"
-              size="xl"
-            >
-              Chamar no WhatsApp
-            </Button>
+            <Link href="https://api.whatsapp.com/send?phone=5521964698829&text=Fiquei%20com%20d%C3%BAvidas">
+              <Button
+                icon={<FaWhatsapp className="mr-3" size={32} />}
+                color="green"
+                size="xl"
+              >
+                Chamar no WhatsApp
+              </Button>
+            </Link>
           </div>
         </div>
       </Promotion.Root>
