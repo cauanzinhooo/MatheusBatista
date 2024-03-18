@@ -1,7 +1,5 @@
 import React from 'react'
-import LeftHand from '@/public/Mão esquerda.svg'
-import RightHand from '@/public/Mão direita.svg'
-import Image from 'next/image'
+
 type AboutProps = {
   children: React.ReactNode
 }
