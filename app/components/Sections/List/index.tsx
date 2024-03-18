@@ -36,7 +36,7 @@ const ListBeneficts = [
 const List = () => {
   return (
     <>
-      <section className="bg-gradient-to-b from-[#3D107B] via-[#280c44] to-black">
+      <section className="bg-gradient-to-b from-[#3D107B] to-[#280c44] ">
         <div className="container relative mx-auto  py-5">
           <div className="relative mx-10">
             <h2 className="mx-auto mb-[70px] mt-[120px] max-w-[900px]   text-center font-sans text-2xl font-semibold  text-white sm:text-4xl">

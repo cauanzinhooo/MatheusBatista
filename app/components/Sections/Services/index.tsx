@@ -21,8 +21,8 @@ const Services = () => {
           <div
             className={
               currentSlide === id.current
-                ? " relative my-4 h-6 w-5 rounded-full after:absolute after:start-[-1000px] after:top-[2px] after:rounded-full after:border after:border-gray-300 after:bg-gray-200 after:transition-all after:content-[''] peer-checked:bg-[#6121BB] peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 sm:w-11 sm:after:start-[2px] sm:after:h-5 sm:after:w-5  sm:after:bg-white rtl:peer-checked:after:-translate-x-full dark:border-gray-600 "
-                : " relative my-4 h-6 w-5 rounded-full after:absolute after:start-[-1000px] after:top-[2px] after:rounded-full after:border after:border-gray-300 after:bg-gray-200 after:transition-all after:content-[''] peer-checked:bg-[#6121BB] peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 sm:w-11 sm:after:start-[2px] sm:after:h-5 sm:after:w-5 sm:after:bg-white rtl:peer-checked:after:-translate-x-full dark:border-gray-600 dark:bg-gray-700 dark:peer-focus:ring-blue-800"
+                ? " relative my-4 h-5 w-5 rounded-full border-gray-600 after:absolute after:start-[-1000px] after:top-[2px] after:rounded-full after:border  after:border-gray-300 after:transition-all after:content-[''] peer-checked:bg-[#6121BB] peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 sm:h-6 sm:w-11 sm:after:start-[2px] sm:after:h-5  sm:after:w-5 sm:after:bg-white rtl:peer-checked:after:-translate-x-full "
+                : " relative my-4 h-5 w-5 rounded-full border-gray-400 bg-gray-500 after:absolute after:start-[-1000px] after:top-[2px] after:rounded-full  after:border after:border-gray-300 after:transition-all after:content-[''] peer-checked:bg-[#6121BB] peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 sm:h-6 sm:w-11 sm:after:start-[2px] sm:after:h-5 sm:after:w-5 sm:after:bg-white rtl:peer-checked:after:-translate-x-full "
             }
           ></div>
         </label>
@@ -57,11 +57,11 @@ const Services = () => {
         >
           <Carousel
             autoplay
-            autoplayInterval={4000}
+            autoplayInterval={10000}
             renderCenterRightControls={unRenderControls}
             renderCenterLeftControls={unRenderControls}
             renderBottomCenterControls={renderToggleButton}
-            className={`before:hful before:-w-full relative rounded-[40px] bg-[#1A1A1A] pb-14 pt-24 before:absolute before:bottom-5 before:bg-yellow-400 before:shadow-3xl   before:shadow-blue-700 before:content-['']`}
+            className={`before:hful before:-w-full relative rounded-[40px] bg-[#1A1A1A] pb-14 pt-24 before:absolute before:bottom-5  before:shadow-3xl  before:content-['']`}
           >
             {Servicesdata.map((i) => (
               <div
