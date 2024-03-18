@@ -36,7 +36,7 @@ const ListBeneficts = [
 const List = () => {
   return (
     <>
-      <section className="bg-gradient-to-b from-[#3D107B] to-[#280c44] ">
+      <section className="bg-gradient-to-b from-[#3D107B] to-[#280c44] pb-20 ">
         <div className="container relative mx-auto  py-5">
           <div className="relative mx-10">
             <h2 className="mx-auto mb-[70px] mt-[120px] max-w-[900px]   text-center font-sans text-2xl font-semibold  text-white sm:text-4xl">
@@ -46,7 +46,7 @@ const List = () => {
           </div>
           <div className="mx-2 sm:mx-0 ">
             <table className="relative  mx-auto table-fixed text-white ">
-              <thead className="bg-gradient-to-r from-[#4F3FA1] to-[#1D173B]">
+              <thead className="bg-[#4F3FA1] ">
                 <tr className=" font-sans text-base font-medium sm:text-lg">
                   <th className="rounded-bl-[16px] rounded-tl-[16px] py-3 pl-3 text-center sm:px-20 sm:text-left ">
                     Tipo de anúncio
@@ -85,12 +85,14 @@ const List = () => {
           </div>
         </div>
       </section>
-      <div className="relative mx-5 mt-[54px] flex justify-center ">
-        <Button size="xl" color="gradientsecondary">
-          <span className="mx-auto items-center text-center ">
-            QUERO DIVULGAR MEU NEGÓCIO
-          </span>
-        </Button>
+      <div className="bg-gradient-to-b from-[#280c44]  to-black pb-20">
+        <div className="relative mx-5  flex justify-center   ">
+          <Button size="xl" color="gradientsecondary">
+            <span className="mx-auto items-center text-center ">
+              QUERO DIVULGAR MEU NEGÓCIO
+            </span>
+          </Button>
+        </div>
       </div>
     </>
   )

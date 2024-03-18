@@ -6,7 +6,7 @@ type PromotionProps = {
 
 const PromotionRoot = ({ children }: PromotionProps) => {
   return (
-    <section className="relative mt-[175px]">
+    <section className="relative  py-10">
       <div className="container mx-auto flex justify-center ">{children}</div>
     </section>
   )
