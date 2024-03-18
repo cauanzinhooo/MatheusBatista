@@ -46,7 +46,7 @@ const List = () => {
           </div>
           <div className="mx-2 sm:mx-0 ">
             <table className="relative  mx-auto table-fixed text-white ">
-              <thead className="bg-[#4F3FA1] ">
+              <thead className="from-bg-[#4F3FA1] bg-gradient-to-t  to-[#1D173B] ">
                 <tr className=" font-sans text-base font-medium sm:text-lg">
                   <th className="rounded-bl-[16px] rounded-tl-[16px] py-3 pl-3 text-center sm:px-20 sm:text-left ">
                     Tipo de anúncio

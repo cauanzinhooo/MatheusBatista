@@ -41,7 +41,7 @@ const Services = () => {
           
   before:right-2
   before:top-3
-  before:h-[569px]
+  before:h-[540px]
   
   before:w-full
   before:rounded-[40px]
@@ -53,7 +53,7 @@ const Services = () => {
   min-[338px]:before:h-[520px]
 
   min-[378px]:before:h-[490px]
-  min-[404px]:before:h-[470px]
+  min-[404px]:before:h-[430px]
   "
         >
           <Carousel

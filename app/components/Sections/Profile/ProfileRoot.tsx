@@ -6,7 +6,7 @@ const ProfileRoot = ({ children }: ProfileProps) => {
     <section className="bg-gradient-to-b from-[#280c44] to-[#280c4c] py-20   text-white">
       <div className="mx-3">
         <div className="container mx-auto">
-          <div className="mx-auto max-w-[1000px] rounded-[40px] bg-[#1A1A1A] shadow-xl shadow-[#280c3c]">
+          <div className="mx-auto max-w-[1000px] rounded-[40px] bg-[#1A1A1A] shadow-lg shadow-purple-700">
             <h2 className="bg-gradient-to-r from-[#984FFF] to-[#2C0F55] bg-clip-text pb-10 pt-10 text-center font-sans text-2xl font-extrabold text-transparent sm:text-[36px]">
               Quem será o seu gestor?
             </h2>
